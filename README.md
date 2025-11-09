@@ -6,6 +6,7 @@
 
 ## Table of Contents
 1. [Set up development environment](#setup-dev-env)
+1. [Develop a Spark Application](#dev-a-spark-app)
 
 <div id="setup-dev-env"/>
 
@@ -36,4 +37,18 @@ See [Kubernetes in Action](https://github.com/nitsvutt/kubernetes-in-action#spar
 - Run `docker compose`:
 ```
 docker compose -f $PROJECT_PATH/lakehouse-platform/scylladb/docker-compose.yml up -d
+```
+
+<div id="dev-a-spark-app"/>
+
+## 2. Develop a Spark Application
+
+- Install Gradle: https://docs.gradle.org/current/userguide/installation.html
+
+- Init project (Java: 17, Structure: Single application project):
+```
+gradle init \
+    --type scala-application \
+    --dsl groovy \
+    --project-name spark-scala-template
 ```
