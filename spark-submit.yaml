@@ -8,6 +8,7 @@ spec:
   mode: cluster
   image: nitsvutt/spark-scala-template:0.1.0
   imagePullPolicy: Always
+  timeToLiveSeconds: 604800
   mainClass: spark.scala.template.SparkPi
   mainApplicationFile: local:///opt/spark/work-dir/jobs/spark-scala-template.jar
   sparkVersion: 3.5.0
