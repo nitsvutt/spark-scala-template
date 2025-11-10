@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        scalaBinaryVersion = '2.13'
+        scalaBinaryVersion = '2.12'
         sparkVersion = '3.5.0'
     }
 }
@@ -20,11 +20,11 @@ repositories {
 
 dependencies {
     // https://mvnrepository.com/artifact/org.apache.spark/spark-core
-    implementation "org.apache.spark:spark-core_${scalaBinaryVersion}:${sparkVersion}"
+    compileOnly "org.apache.spark:spark-core_${scalaBinaryVersion}:${sparkVersion}"
     // https://mvnrepository.com/artifact/org.apache.spark/spark-sql
-    implementation "org.apache.spark:spark-sql_${scalaBinaryVersion}:${sparkVersion}"
+    compileOnly "org.apache.spark:spark-sql_${scalaBinaryVersion}:${sparkVersion}"
     // https://mvnrepository.com/artifact/org.apache.spark/spark-streaming
-    implementation "org.apache.spark:spark-streaming_${scalaBinaryVersion}:${sparkVersion}"
+    compileOnly "org.apache.spark:spark-streaming_${scalaBinaryVersion}:${sparkVersion}"
 }
 
 shadowJar {
@@ -36,5 +36,5 @@ shadowJar {
 }
 
 application {
-    mainClass = 'spark.scala.template.App'
+    mainClass = 'spark.scala.template.SparkPi'
 }

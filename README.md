@@ -43,9 +43,17 @@ docker compose -f $PROJECT_PATH/lakehouse-platform/scylladb/docker-compose.yml u
 
 ## 2. Develop a Spark Application
 
-- Install Gradle: https://docs.gradle.org/current/userguide/installation.html
+<!-- - Check for version of Gradle:
+```
+brew search gradle
+``` -->
 
-- Init project (Java: 17, Structure: Single application project):
+- Install Gradle:
+```
+brew install gradle
+```
+
+- Init Gradle project (Java: 17, Structure: Single application project):
 ```
 gradle init \
     --type scala-application \
@@ -65,6 +73,11 @@ gradle init \
 ```
 docker build -t nitsvutt/spark-scala-template:0.1.0 .
 ```
+
+<!-- - Check for jar file: -->
+<!-- ```
+docker run --rm -it nitsvutt/spark-scala-template:0.1.0 bash
+``` -->
 
 - Submit spark job:
 ```
