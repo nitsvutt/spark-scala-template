@@ -62,7 +62,7 @@ gradle init \
     --project-name spark-scala-template
 ```
 
-- Update `settings.gradle`, `app/build.gradle` as needed.
+- Update `settings.gradle`, `build.gradle` as needed.
 
 - Pin gradle wrapper version to 8.1.1 (to match with shadow version):
 ```
