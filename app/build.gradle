@@ -1,0 +1,40 @@
+buildscript {
+    ext {
+        scalaBinaryVersion = '2.13'
+        sparkVersion = '3.5.0'
+    }
+}
+
+plugins {
+    id 'scala'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+group = 'spark.scala.template'
+version = '0.1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.apache.spark/spark-core
+    implementation "org.apache.spark:spark-core_${scalaBinaryVersion}:${sparkVersion}"
+    // https://mvnrepository.com/artifact/org.apache.spark/spark-sql
+    implementation "org.apache.spark:spark-sql_${scalaBinaryVersion}:${sparkVersion}"
+    // https://mvnrepository.com/artifact/org.apache.spark/spark-streaming
+    implementation "org.apache.spark:spark-streaming_${scalaBinaryVersion}:${sparkVersion}"
+}
+
+shadowJar {
+    mergeServiceFiles {
+        exclude 'META-INF/LICENSE', 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA'
+    }
+    archiveFileName = "spark-scala-template.jar"
+    zip64 = true
+}
+
+application {
+    mainClass = 'spark.scala.template.App'
+}
