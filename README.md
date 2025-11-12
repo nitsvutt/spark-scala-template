@@ -1,9 +1,5 @@
 # Spark Scala Template
 
-![license](https://img.shields.io/github/license/nitsvutt/spark-scala-template)
-![stars](https://img.shields.io/github/stars/nitsvutt/spark-scala-template)
-![forks](https://img.shields.io/github/forks/nitsvutt/spark-scala-template)
-
 ## Table of Contents
 1. [Set up development environment](#setup-dev-env)
 1. [Develop a Spark Application](#dev-a-spark-app)
