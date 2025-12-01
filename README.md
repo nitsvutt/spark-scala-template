@@ -28,11 +28,25 @@ See [Kubernetes in Action](https://github.com/nitsvutt/kubernetes-in-action#set-
 
 See [Kubernetes in Action](https://github.com/nitsvutt/kubernetes-in-action#spark-on-k8s) for more info.
 
-### 1.4. Set up ScyllaDB
+### 1.4. Set up Data Source
 
 - Run `docker compose`:
 ```
-docker compose -f $PROJECT_PATH/lakehouse-platform/scylladb/docker-compose.yml up -d
+bash $PROJECT_PATH/lakehouse-platform/operation/docker-compose.sh up product2
+```
+
+### 1.4. Set up Kafka
+
+- Run `docker compose`:
+```
+bash $PROJECT_PATH/lakehouse-platform/operation/docker-compose.sh up kafka
+```
+
+### 1.5. Set up ScyllaDB
+
+- Run `docker compose`:
+```
+bash $PROJECT_PATH/lakehouse-platform/operation/docker-compose.sh up scylladb
 ```
 
 <div id="dev-a-spark-app"/>
