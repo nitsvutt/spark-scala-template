@@ -11,7 +11,7 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '8.1.1'
 }
 
-group = 'spark.scala.secret'
+group = 'spark.scala.template'
 version = '0.1.0'
 
 repositories {
@@ -31,10 +31,10 @@ shadowJar {
     mergeServiceFiles {
         exclude 'META-INF/LICENSE', 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA'
     }
-    archiveFileName = "spark-scala-secret.jar"
+    archiveFileName = "spark-scala-template.jar"
     zip64 = true
 }
 
 application {
-    mainClass = 'spark.scala.secret.SparkApp'
+    mainClass = 'spark.scala.template.SparkPi'
 }

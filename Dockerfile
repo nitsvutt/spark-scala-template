@@ -12,4 +12,4 @@ RUN ./gradlew --no-daemon shadowJar
 
 FROM spark:3.5.0
 
-COPY --from=builder /src/build/libs/spark-scala-secret.jar /opt/spark/work-dir/jobs/spark-scala-secret.jar
+COPY --from=builder /src/build/libs/spark-scala-template.jar /opt/spark/work-dir/jobs/spark-scala-template.jar
